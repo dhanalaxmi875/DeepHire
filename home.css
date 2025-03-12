@@ -1,0 +1,101 @@
+.deephire-bg-container {
+  padding: 20px;
+}
+
+.deephire-logo {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.deephire-title {
+  font-size: 32px;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.deephire-caption {
+  border-radius: 10px;
+}
+
+.deephire-bg-img {
+  height: 60vh;
+  width: 100vw;
+  border-radius: 10px;
+}
+
+.deephire-bg-img {
+  height: 60vh;
+  width: 50vw;
+}
+
+.deephire-caption {
+  font-weight: bold;
+  margin: 100px 50px 50px 50px;
+}
+
+.deephire-card-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.deephire-card {
+  border-radius: 10px;
+}
+
+.company-logo {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.company {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  margin: 10px;
+}
+
+.company-name {
+  font-weight: bold;
+}
+
+.difficulty-selector {
+  margin: 30px 0;
+}
+.difficulty-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+.difficulty-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.difficulty-btn:hover {
+  background-color: black;
+  color: white;
+}
+.get-started-btn {
+  margin-top: 10px;
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.get-started-btn:hover {
+  background-color: #0056b3;
+}
