@@ -19,7 +19,7 @@
                         <a class="nav-link active mr-5" aria-current="page" href="#Home">Home</a>
                         <a class="nav-link mr-5" href="#AboutUs">About Us</a>
                         <a class="nav-link mr-5" href="#Services">Services</a>
-                        <a class="nav-link mr-5" href="#">Testimonials</a>
+                        <a class="nav-link mr-5" href="#Testimonials">Testimonials</a>
                         <a class="nav-link mr-5" href="#ContactUs">Contact Us</a>
                         <div class="theme-toggle-container">
                             <button class="theme-toggle" onclick="toggleDarkMode()">
@@ -201,7 +201,50 @@
                 </div>
             </div>
         </div>
-
+       <div class="testimonials" id="Testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- <div id="carouselExampleIndicators" class="carousel slide"> -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://res.cloudinary.com/dlxddikck/image/upload/c_crop,w_820,h_820/v1743609563/WhatsApp_Image_2025-04-02_at_21.26.58_c51a52d9_bpo9iv.jpg" class="d-block testimonial-img" alt="...">
+                            <p class="testimonial-description">As someone transitioning into a new role, DeepHire provided me with the structure and practice I needed. The AI-powered questions were spot on, and the detailed analysis after each session helped me improve tremendously. Highly recommended!</p>
+                                    <p class="testimonial-name text-end">-James Carter (Product Manager, 30)
+                                    </p>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/dlxddikck/image/upload/c_crop,w_820,h_820/v1743609958/WhatsApp_Image_2025-04-02_at_21.26.58_04bf4808_wcinay.jpg" class="d-block testimonial-img" alt="...">
+                            <p class="testimonial-description">I was struggling with technical interviews until I found DeepHire. The personalized reports and real-time feedback allowed me to focus on my weak points and enhance my problem-solving approach. This platform is a must-have for job seekers!</p>
+                                    <p class="testimonial-name text-end">-Priya Patel (Data Scientist, 28)
+                                    </p>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/dlxddikck/image/upload/v1743610041/WhatsApp_Image_2025-04-02_at_21.26.57_b0aa528c_s3dcig.jpg" class="d-block testimonial-img" alt="...">
+                            <p class="testimonial-description">DeepHire was a game-changer for me! The AI-driven mock interviews gave me the confidence I needed before my actual job interviews. The instant feedback helped me refine my answers and improve my communication skills. I landed my dream job, thanks to DeepHire!</p>
+                                    <p class="testimonial-name text-end">-Sarah Thompson (Software Engineer, 25)
+                                    </p>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+       </div>
         <div class="contact-us shadow mt-5 p-3" id="ContactUs">
             <div class="container details-section">
                 <div class="row">
@@ -231,7 +274,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container copyrights-section shadow mt-5">
+            <div class="container copyrights-section mt-5">
                 <div class="row">
                     <div class="col-12">
                         <p class="copyrights-description text-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle-fill" viewBox="0 0 16 16">
@@ -244,13 +287,4 @@
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    <style>
-        .difficulty-btn {
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-        .difficulty-btn.active {
-            background-color: #007bff;
-            color: #ffffff;
-        }
-    </style>
 </html>
