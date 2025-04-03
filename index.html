@@ -8,61 +8,45 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary nav-cust-text">
-            <div class="container-fluid">
-                <a class="navbar-brand cust-logo-name" href="#"> <img class="logo" src="https://i.pinimg.com/736x/3e/0b/e1/3e0be10d80a47c551e4010fc5283583f.jpg" alt="" /> DeepHire</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link active mr-5" aria-current="page" href="#Home">Home</a>
-                        <a class="nav-link mr-5" href="#AboutUs">About Us</a>
-                        <a class="nav-link mr-5" href="#Services">Services</a>
-                        <a class="nav-link mr-5" href="#Testimonials">Testimonials</a>
-                        <a class="nav-link mr-5" href="#ContactUs">Contact Us</a>
-                        <div class="theme-toggle-container">
-                            <button class="theme-toggle" onclick="toggleDarkMode()">
-                                <span id="theme-icon">🌞</span>
-                                <!-- <span id="theme-text">Toggle Theme</span> -->
-                              </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
         <div class="home" id="Home">
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://img.freepik.com/free-vector/online-job-interview-concept_23-2148615388.jpg?t=st=1743077549~exp=1743081149~hmac=7bf2b749345b3c0681fa4a5059bf4ca9c3c974a6bb883faa002f26adbd22801f&w=1380" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://img.freepik.com/free-vector/interview-concept-illustration_114360-1678.jpg?t=st=1743078631~exp=1743082231~hmac=a7b3688bcb8cd8823cc8b7baddcf20a548fcefe5a61f8ec8fc6cd38e15cce912&w=826" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://img.freepik.com/free-vector/choosing-best-candidate-concept_52683-43377.jpg?t=st=1743077302~exp=1743080902~hmac=7edb4721af8f7f1a96a16b7b9618a29eef6422969f971de44b72ef4232b6f5cf&w=1380" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill indicator-cust" viewBox="0 0 16 16">
-                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-                        </svg></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill indicator-cust" viewBox="0 0 16 16">
-                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                        </svg></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-    
+            <!-- <div class="nav-items-left d-flex flex-row justify-content-start">
+                <a href="#Home">Home</a>
+                <a href="#AboutUs">About Us</a>
+                <a href="#Services">Services</a>
             </div>
+            <div class="nav-items-right d-flex flex-row justify-content-end">
+                <a href="#Testimonials">Testimonials</a>
+                <a href="#Blogs">Blogs</a>
+                <a href="#ContactUs">Contact Us</a>
+            </div> -->
+                <div class="container-fluid d-flex justify-content-between">
+                    <!-- Left Navbar -->
+                    <ul class="navbar me-auto d-flex flex-row justify-content-start">
+                        <li class="nav-item">
+                            <a class="" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="#">Services</a>
+                        </li>
+                    </ul>
+        
+                    <!-- Right Navbar -->
+                    <ul class="navbar-nav ms-auto d-flex flex-row justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+        
         </div>
         <div class="about-us" id="AboutUs">
             <div class="container">
@@ -118,7 +102,7 @@
                                     <p class="service-name">Netflix</p>
                                 </div>
                                 <div class="text-center">
-                                    <img class="service-logo" src="https://i.pinimg.com/736x/39/87/49/398749d9a5520aa1be5fe3783f941df6.jpg" alt="" />
+                                    <img class="service-logo" src="https://res.cloudinary.com/dlxddikck/image/upload/v1743663166/infosys-logo-infosys-icon-free-free-vector_ij8ssm.jpg" alt="" />
                                     <p class="service-name">Infosys</p>
                                 </div>
                             </div>
@@ -196,46 +180,40 @@
                 </div>
             </div>
         </div>
-       <div class="testimonials shadow" id="Testimonials">
+       <div class="testimonials" id="Testimonials">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <!-- <div id="carouselExampleIndicators" class="carousel slide"> -->
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="https://res.cloudinary.com/dlxddikck/image/upload/c_crop,w_820,h_820/v1743609563/WhatsApp_Image_2025-04-02_at_21.26.58_c51a52d9_bpo9iv.jpg" class="d-block testimonial-img" alt="...">
-                            <p class="testimonial-description">As someone transitioning into a new role, DeepHire provided me with the structure and practice I needed. The AI-powered questions were spot on, and the detailed analysis after each session helped me improve tremendously. Highly recommended!</p>
-                                    <p class="testimonial-name text-end">-James Carter (Product Manager, 30)
-                                    </p>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://res.cloudinary.com/dlxddikck/image/upload/c_crop,w_820,h_820/v1743609958/WhatsApp_Image_2025-04-02_at_21.26.58_04bf4808_wcinay.jpg" class="d-block testimonial-img" alt="...">
-                            <p class="testimonial-description">I was struggling with technical interviews until I found DeepHire. The personalized reports and real-time feedback allowed me to focus on my weak points and enhance my problem-solving approach. This platform is a must-have for job seekers!</p>
-                                    <p class="testimonial-name text-end">-Priya Patel (Data Scientist, 28)
-                                    </p>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://res.cloudinary.com/dlxddikck/image/upload/v1743610041/WhatsApp_Image_2025-04-02_at_21.26.57_b0aa528c_s3dcig.jpg" class="d-block testimonial-img" alt="...">
-                            <p class="testimonial-description">DeepHire was a game-changer for me! The AI-driven mock interviews gave me the confidence I needed before my actual job interviews. The instant feedback helped me refine my answers and improve my communication skills. I landed my dream job, thanks to DeepHire!</p>
-                                    <p class="testimonial-name text-end">-Sarah Thompson (Software Engineer, 25)
-                                    </p>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
+                <div class="col-6 mb-3">
+                    <div class="testimonial-card shadow">
+                        <img src="https://res.cloudinary.com/dlxddikck/image/upload/v1743662408/Screenshot_2025-04-03_120906_wktxw6.png" class="d-block testimonial-img" alt="...">
+                             <p class="testimonial-description">As someone transitioning into a new role, DeepHire provided me with the structure and practice I needed. The AI-powered questions were spot on, and the detailed analysis after each session helped me improve tremendously. Highly recommended!</p>
+                                     <p class="testimonial-name text-end">-James Carter (Product Manager, 30)
+                                     </p>
+                    </div>
+                </div>
+                <div class="col-6 mb-3">
+                    <div class="testimonial-card shadow">
+                        <img src="https://res.cloudinary.com/dlxddikck/image/upload/v1743662407/Screenshot_64_u0hyz5.png" class="d-block testimonial-img" alt="...">
+                             <p class="testimonial-description">I was struggling with technical interviews until I found DeepHire. The personalized reports and real-time feedback allowed me to focus on my weak points and enhance my problem-solving approach. This platform is a must-have for job seekers!</p>
+                                     <p class="testimonial-name text-end">-Priya Patel (Data Scientist, 28)
+                                     </p>
+                    </div>
+                </div>
+                <div class="col-6 mb-3">
+                    <div class="testimonial-card shadow">
+                        <img src="https://res.cloudinary.com/dlxddikck/image/upload/v1743662408/Screenshot_65_zwmf7n.png" class="d-block testimonial-img" alt="...">
+                             <p class="testimonial-description">DeepHire was a game-changer for me! The AI-driven mock interviews gave me the confidence I needed before my actual job interviews. The instant feedback helped me refine my answers and improve my communication skills. I landed my dream job, thanks to DeepHire!</p>
+                                     <p class="testimonial-name text-end">-Sarah Thompson (Software Engineer, 25)
+                                     </p>
+                    </div>
+                </div>
+                <div class="col-6 mb-3">
+                    <div class="testimonial-card shadow">
+                        <img src="https://res.cloudinary.com/dlxddikck/image/upload/v1743661194/ChatGPT_Image_Apr_3_2025_11_47_51_AM_gx9c6l.png" class="d-block testimonial-img" alt="...">
+                             <p class="testimonial-description">DeepHire completely transformed my interview preparation! I was struggling with behavioral questions, but the real-time AI feedback helped me refine my answers and improve my confidence. Thanks to DeepHire, I aced my final interview and landed my dream job!</p>
+                                     <p class="testimonial-name text-end">- Ryan Mitchell (Software Engineer, 27)
+                                     </p>
+                    </div>
                 </div>
             </div>
         </div>

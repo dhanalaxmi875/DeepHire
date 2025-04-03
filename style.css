@@ -15,20 +15,33 @@
   font-weight: bold;
 }
 
-.carousel-indicators [data-bs-target] {
-  background-color: gray;
+.home {
+  background-image: url("https://downloadscdn6.freepik.com/23/2148903/2148902268.jpg?filename=woman-work-having-video-call-laptop.jpg&token=exp=1743670273~hmac=9304410a373fd259a6d5670385d841e9&filename=2148902268.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+.nav-items-left a {
+  /* text-align: center; */
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 30px 10px 10px 10px;
+}
+.nav-items-right a {
+  /* text-align: right !important; */
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px;
 }
 
-.carousel-indicators .active {
-  background-color: black;
+ul li a{
+  color: black !important;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px;
+  list-style-type: none;
 }
-
-.carousel-item img {
-  width: 100vw;
-  height: 55vh;
-  object-fit: cover;
-}
-
 .about-us-img {
   height: 42vh;
 }
@@ -457,17 +470,13 @@ body.dark-mode .theme-toggle:hover {
   font-size: 36px;
 }
 
-.testimonial-card {
+/* .testimonial-card {
   background-color: #323f4b;
   text-align: center;
   padding: 10px;
   margin-bottom: 10px;
-}
-
-/* .testimonial-img {
-  height: 20vh !important;
-  border-radius: 50%;
 } */
+
 .testimonial-img {
   width: 150px !important; /* Ensures a uniform width */
   height: 150px !important; /* Ensures a uniform height */
@@ -485,7 +494,7 @@ body.dark-mode .theme-toggle:hover {
 .testimonial-name {
   font-size: 24px;
   font-weight: bold;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 
@@ -507,7 +516,8 @@ body.dark-mode {
   --secondary-color: #1e40af;
   --accent-color: #2563eb;
   --text-color: #f3f4f6;
-  --bg-color: #1f2937;
+  /* --bg-color: #1f2937;  #19202A*/ 
+  --bg-color: #19202A !important;
   --border-color: #374151;
   --shadow-color: rgba(0, 0, 0, 0.3);
 }
@@ -634,7 +644,7 @@ body.dark-mode .nav-link:hover {
 }
 
 body.dark-mode .difficulty-selector,
-body.dark-mode .testimonials,
+body.dark-mode .testimonial-card,
 body.dark-mode .contact-us,
 body.dark-mode .credits {
   background-color: #2d2d2d !important;
@@ -661,4 +671,11 @@ body.dark-mode .credits {
 .testimonials {
   margin: 20px;
   border-radius: 10px;
+}
+
+.testimonial-card {
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
 }
