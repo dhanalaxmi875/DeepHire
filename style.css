@@ -483,9 +483,9 @@ body.dark-mode .theme-toggle:hover {
 }
 
 .testimonial-name {
-  color: #0c0f13;
   font-size: 24px;
   font-weight: bold;
+  margin-right: 30px;
 }
 
 
