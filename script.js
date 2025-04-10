@@ -9,8 +9,9 @@ function createThemeToggle() {
     const toggle = document.createElement('button');
     toggle.className = 'theme-toggle';
     toggle.innerHTML = `
-        <span id="theme-icon">🌞</span>
-        // <span id="theme-text">Dark Mode</span>
+        <span class="theme-icon-container">
+            <span id="theme-icon">🌞</span>
+        </span>
     `;
     toggle.onclick = toggleDarkMode;
 
@@ -25,16 +26,27 @@ function createThemeToggle() {
 
 function updateThemeUI(isDark) {
     const themeIcon = document.getElementById('theme-icon');
-    const themeText = document.getElementById('theme-text');
+    const themeIconContainer = document.querySelector('.theme-icon-container');
     
-    if (themeIcon && themeText) {
+    if (themeIcon && themeIconContainer) {
+        // Update icon
         if (isDark) {
-            themeIcon.textContent = '🌙';
-            // themeText.textContent = 'Light Mode';
+            themeIcon.textContent = '🌙  ';
         } else {
-            themeIcon.textContent = '🌞';
-            // themeText.textContent = 'Dark Mode';
+            themeIcon.textContent = '  🌞';
         }
+        
+        // Add sliding animation
+        if (isDark) {
+            themeIconContainer.style.animation = 'slideLeft 0.3s ease forwards';
+        } else {
+            themeIconContainer.style.animation = 'slideRight 0.3s ease forwards';
+        }
+        
+        // Reset animation after completion
+        setTimeout(() => {
+            themeIconContainer.style.animation = '';
+        }, 300);
     }
 }
 
@@ -42,12 +54,18 @@ function enableDarkMode() {
     document.body.classList.add('dark-mode');
     localStorage.setItem('darkMode', 'enabled');
     updateThemeUI(true);
+    
+    // Add smooth transition for dark mode
+    document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
 }
 
 function disableDarkMode() {
     document.body.classList.remove('dark-mode');
     localStorage.setItem('darkMode', 'disabled');
     updateThemeUI(false);
+    
+    // Reset transition
+    document.body.style.transition = '';
 }
 
 function toggleDarkMode() {
@@ -62,12 +80,27 @@ function toggleDarkMode() {
 function initDarkMode() {
     createThemeToggle();
     const savedMode = localStorage.getItem('darkMode');
-    if (savedMode === 'enabled') {
+    
+    // Check system preference for dark mode
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedMode === 'enabled' || (savedMode === null && prefersDark)) {
         enableDarkMode();
     } else {
         disableDarkMode();
     }
 }
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (localStorage.getItem('darkMode') === null) {
+        if (e.matches) {
+            enableDarkMode();
+        } else {
+            disableDarkMode();
+        }
+    }
+});
 
 // Apply dark mode when DOM is loaded
 if (document.readyState === 'loading') {
@@ -119,7 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
 
 // Difficulty Level Selection
 document.addEventListener('DOMContentLoaded', function() {
@@ -208,101 +240,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-
-
-// Dark mode functionality
-function createThemeToggle() {
-    // Check if toggle already exists
-    if (document.querySelector('.theme-toggle')) return;
-
-    const header = document.querySelector('.header-container');
-    if (!header) return;
-
-    const toggle = document.createElement('button');
-    toggle.className = 'theme-toggle';
-    toggle.innerHTML = `
-        <span id="theme-icon">🌞</span>
-    `;
-    toggle.onclick = toggleDarkMode;
-
-    // Insert after the h1 if it exists, otherwise at the start of header
-    const h1 = header.querySelector('h1');
-    if (h1) {
-        h1.after(toggle);
-    } else {
-        header.prepend(toggle);
-    }
-}
-
-function updateThemeUI(isDark) {
-    const themeIcon = document.getElementById('theme-icon');
-    
-    if (themeIcon) {
-        if (isDark) {
-            themeIcon.textContent = '🌙';
-        } else {
-            themeIcon.textContent = '🌞';
-        }
-    }
-}
-
-function enableDarkMode() {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'enabled');
-    updateThemeUI(true);
-    
-    // Add smooth transition for dark mode
-    document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-}
-
-function disableDarkMode() {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'disabled');
-    updateThemeUI(false);
-    
-    // Reset transition
-    document.body.style.transition = '';
-}
-
-function toggleDarkMode() {
-    if (document.body.classList.contains('dark-mode')) {
-        disableDarkMode();
-    } else {
-        enableDarkMode();
-    }
-}
-
-// Initialize dark mode
-function initDarkMode() {
-    createThemeToggle();
-    const savedMode = localStorage.getItem('darkMode');
-    
-    // Check system preference for dark mode
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedMode === 'enabled' || (savedMode === null && prefersDark)) {
-        enableDarkMode();
-    } else {
-        disableDarkMode();
-    }
-}
-
-// Listen for system theme changes
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (localStorage.getItem('darkMode') === null) {
-        if (e.matches) {
-            enableDarkMode();
-        } else {
-            disableDarkMode();
-        }
-    }
-});
-
-// Apply dark mode when DOM is loaded
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initDarkMode);
-} else {
-    initDarkMode();
-}
